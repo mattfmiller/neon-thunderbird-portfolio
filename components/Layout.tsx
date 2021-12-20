@@ -9,7 +9,7 @@ const Layout: React.FC = ({ children }) => {
       <Nav />
       <div className={styles.container}>
         <main className={styles.main}>
-          <Header title={"header title"} />
+          <Header title={"Neon Thunderbird Photography"} />
           {children}
         </main>
       </div>
