@@ -1,19 +1,40 @@
-import * as React from "react";
-import navStyles from "../styles/Nav.module.css";
+import styled from "@emotion/styled";
 import Link from "next/link";
+import * as React from "react";
 
-interface Props {}
+const Div = styled.div({
+  height: 50,
+  padding: 10,
+  color: "#000",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-start",
+});
 
-const Nav: React.FC = (props: Props) => {
+const UL = styled.ul({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  listStyle: "none",
+});
+
+const LI = styled.li({
+  margin: "5px 15px",
+});
+
+const Nav: React.FC = () => {
   return (
-    <nav className={navStyles.nav}>
-      <ul>
-        <li>
-          <Link href="/">Home</Link>
+    <Div>
+      <UL>
+        <LI>
+          <Link href="/">Matt Miller</Link>
+        </LI>
+        <LI>
+          <Link href="/">Photos</Link>
           <Link href="/about">About</Link>
-        </li>
-      </ul>
-    </nav>
+        </LI>
+      </UL>
+    </Div>
   );
 };
 

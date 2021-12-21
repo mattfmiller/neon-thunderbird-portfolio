@@ -1,31 +1,15 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import PhotoList from "../components/PhotoList";
-import { server } from "../config";
+import CollectionList from "../components/CollectionList";
 
-interface Props {
-  photos: any[];
-}
-
-export const getStaticProps = async () => {
-  const res = await fetch(`${server}/api/photos`);
-  const photos = await res.json();
-
-  return {
-    props: {
-      photos,
-    },
-  };
-};
-
-const Home: NextPage<Props> = ({ photos }) => {
+const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Neon Thunderbird Photography</title>
+        <title>Matt Miller Photography</title>
         <meta />
       </Head>
-      <PhotoList photos={photos} />
+      <CollectionList />
     </div>
   );
 };
