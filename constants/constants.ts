@@ -6,3 +6,5 @@ export enum Collection {
   ThingsBW = "things_bw",
   ThingsColor = "things_color",
 }
+
+export const NAV_HEIGHT = 75;

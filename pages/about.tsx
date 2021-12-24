@@ -1,8 +1,10 @@
+import Page from "../components/Page";
+
 const about = () => {
   return (
-    <div>
+    <Page>
       <h1>About</h1>
-    </div>
+    </Page>
   );
 };
 

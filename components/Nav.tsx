@@ -1,39 +1,38 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
 import * as React from "react";
+import { NAV_HEIGHT } from "../constants/constants";
 
 const Div = styled.div({
-  height: 50,
+  height: NAV_HEIGHT,
   padding: 10,
   color: "#000",
   display: "flex",
   alignItems: "center",
-  justifyContent: "flex-start",
+  justifyContent: "space-between",
+  position: "absolute",
+  top: 0,
+  width: "100vw",
+  zIndex: 100,
 });
 
-const UL = styled.ul({
+const Item = styled.div({
+  margin: "10px 25px",
   display: "flex",
   justifyContent: "space-between",
-  alignItems: "center",
-  listStyle: "none",
-});
-
-const LI = styled.li({
-  margin: "5px 15px",
+  width: 125,
 });
 
 const Nav: React.FC = () => {
   return (
     <Div>
-      <UL>
-        <LI>
-          <Link href="/">Matt Miller</Link>
-        </LI>
-        <LI>
-          <Link href="/">Photos</Link>
-          <Link href="/about">About</Link>
-        </LI>
-      </UL>
+      <Item>
+        <Link href="/">Matt Miller</Link>
+      </Item>
+      <Item>
+        <Link href="/">Photos</Link>
+        <Link href="/about">About</Link>
+      </Item>
     </Div>
   );
 };
