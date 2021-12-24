@@ -4,14 +4,17 @@ import React from "react";
 import { Collection } from "../constants/constants";
 
 const Div = styled.div({
+  alignItems: "center",
+  backgroundAttachment: "fixed",
   backgroundImage: "url('/bgImage.jpg')",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
-  minHeight: "100vh",
-  minWidth: "100vw",
   display: "flex",
   flexDirection: "column",
-  alignItems: "center",
   justifyContent: "center",
+  minHeight: "100vh",
+  minWidth: "100vw",
 });
 
 const CollectionLink = styled.a({
