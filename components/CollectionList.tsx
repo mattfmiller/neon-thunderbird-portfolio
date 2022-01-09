@@ -5,7 +5,7 @@ import { Collection, CollectionCoverPhotos } from "../constants/constants";
 
 const DEFAULT_BG_PATH = "/bgImage.jpg";
 
-const Div = styled.div(
+const Div = styled.div<{ path: string }>(
   {
     alignItems: "center",
     backgroundAttachment: "fixed",
@@ -19,7 +19,7 @@ const Div = styled.div(
     justifyContent: "center",
     minHeight: "100vh",
     minWidth: "100vw",
-    transition: "0.3s ease all",
+    // transition: "0.3s ease all",
   },
   (props) => ({
     backgroundImage: `url(${props.path})`,
@@ -28,6 +28,9 @@ const Div = styled.div(
 
 const CollectionLink = styled.a({
   margin: 10,
+  "&:hover": {
+    color: "#707070",
+  },
 });
 
 const CollectionList: React.FC = () => {

@@ -1,7 +1,13 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import * as React from "react";
 import { NAV_HEIGHT } from "../constants/constants";
+
+enum linkPaths {
+  home = "/",
+  about = "/about",
+}
 
 const Div = styled.div({
   height: NAV_HEIGHT,
@@ -16,6 +22,23 @@ const Div = styled.div({
   zIndex: 100,
 });
 
+const PageLink = styled.div<{
+  header?: boolean;
+  activeLink?: boolean;
+}>(
+  {
+    fontSize: 20,
+    cursor: "pointer",
+    "&:hover": {
+      color: "#707070",
+    },
+  },
+  (props) => ({
+    fontSize: props.header ? 20 : 16,
+    textDecoration: props.activeLink ? "underline" : "none",
+  })
+);
+
 const Item = styled.div({
   margin: "10px 25px",
   display: "flex",
@@ -24,14 +47,23 @@ const Item = styled.div({
 });
 
 const Nav: React.FC = () => {
+  const router = useRouter();
+  const pathname = router.pathname;
+
   return (
     <Div>
       <Item>
-        <Link href="/">Matt Miller</Link>
+        <Link href={linkPaths.home} passHref={true}>
+          <PageLink header={true}>Matt Miller</PageLink>
+        </Link>
       </Item>
       <Item>
-        <Link href="/">Photos</Link>
-        <Link href="/about">About</Link>
+        <Link href={linkPaths.home} passHref={true}>
+          <PageLink activeLink={pathname === linkPaths.home}>Photos</PageLink>
+        </Link>
+        <Link href={linkPaths.about} passHref={true}>
+          <PageLink activeLink={pathname === linkPaths.about}>About</PageLink>
+        </Link>
       </Item>
     </Div>
   );
