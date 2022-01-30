@@ -15,7 +15,7 @@ export const CollectionItem: React.FC = () => {
       <Div>
         <div>This will be a collection</div>
         <Image
-          src="https://lh3.googleusercontent.com/pw/AM-JKLWsGK3mWBa5BqmsO-hZDOVB3ddsbkFseQ0So_iLBYQxyfdx59eBdR7592yoXEXyLcE43h2jiOBybYYx7oAIAaDIIlWgF_VLwoy8V1LQgOuc4g-FVuYzlHSn45iY4yG_KhuHw1Snt8CgTJj_kpK0SOlO=w3032-h2442-no"
+          src="https://lh3.googleusercontent.com/pw/AM-JKLUDnuRQpciEuFuWfc0Ql_OrrZecMFcJZaMDXksadWmitfp1o-O1TuspFvnGNSZPZa4bISThrmYGhhKi44yrMbCqxoSsIzJrLl8iESPUO6SVpvD0bI7lMtmW-dp17tdgR0D2Y4mTNhIV5qWdVEf1PCQS=w1920-h1547-no"
           alt="mountian pic"
           width="500"
           height="500"

@@ -1,7 +1,10 @@
-export type PhotoData = {
-    id: number;
-    name: string;
-    source: string;
-    camera: string;
-    film: string;
-  };
+import { Camera, Collection, FilmStock } from "./constants";
+
+export interface Photo {
+  film: FilmStock;
+  camera: Camera;
+  source: string;
+  name: string;
+  collection: Collection;
+  cover: boolean;
+}
